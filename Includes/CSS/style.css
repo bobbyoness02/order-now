@@ -5,14 +5,15 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
 
 /* Default Modified Values */
-body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black); }
+body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black) }
 a{  text-decoration: none;  color: initial; }
 a:hover, a:focus{   color: var(--primary-color);  }
 ul{ margin: 0;  padding: 0; list-style: none;   }
-button{ border: none;   background: none;   }
+button{ border: none;   background: none;   padding: none;  }
 .pd-y{  padding: 85px 0 135px;    }
-h2{ font-size: 3.75rem; line-height: 3.75rem;    margin-bottom: 40px;  -webkit-text-stroke: 1.5px var(--primary-color);   color: var(--primary-color);  }
+h2{ font-size: 60px; line-height: 3.75rem;    margin-bottom: 40px;  -webkit-text-stroke: 1px var(--primary-color);   color: var(--primary-color);  text-align: center;  letter-spacing: -2px;   }
 h2::first-letter{   text-transform: capitalize; }
+
 :root{
     --primary-color: #35b9be;   --secondary-color: #e5fcfc;    --tertinary-color: #007e83; --clr-shadow-blue: #7f8da7;  --clr-teal: #007e83;  --clr-caribbean-green: #04da8d;   --clr-white: #ffffff;  --clr-black: #000000;
     --fw-500: 500;  --fw-600: 600;    --fw-700: 700;  --fw-800: 800;    --fw-900: 900;
@@ -53,9 +54,12 @@ h2::first-letter{   text-transform: capitalize; }
 .btn:focus, .btn:hover, .btn:active{ border: none;   background-color: var(--primary-color) !important;  }
 
 /* Border Radius */
-.rounded-4{ border-radius: 0.4rem !important;   }
-.rounded-5{ border-radius: 0.5rem !important;   }
-.rounded-6{ border-radius: 0.6rem !important;   }
+.rounded-4{ border-radius: var(--rounded-4)   }
+.rounded-6{ border-radius: var(--rounded-6)   }
+.rounded-8{ border-radius: var(--rounded-8)   }
+.rounded-10{ border-radius: var(--rounded-10)   }
+.rounded-12{ border-radius: var(--rounded-12)  }
+.rounded-14{ border-radius: var(--rounded-14)   }
 
 
 
@@ -86,21 +90,21 @@ h2::first-letter{   text-transform: capitalize; }
 
 
 /* About Us */
-#aboutus{   margin-top: 103px;   }
-#aboutus::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 774px;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
-#aboutus::after{    content: "yumyum";  font-family: var(--ft-rage);    position: absolute; color: white; bottom: 305px;   left: 200px;    z-index: -1; font-size: 275px;   transform: rotate(-15deg) scale(0.8);}
+#aboutus, #takeaway{   margin-top: 103px;   }
+#aboutus::before, #takeaway::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 774px;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
+#aboutus::after, #takeaway::after{    content: "yumyum";  font-family: var(--ft-rage);    position: absolute; color: white; bottom: 305px;   left: 200px;    z-index: -1; font-size: 275px;   transform: rotate(-15deg) scale(0.8);}
 /* Left */
-#aboutus .left{ padding-left: 3rem;}
-#aboutus h2{    padding-right: 150px;   }
-#aboutus button{    margin-top: 40px;   }
+#aboutus .left, #takeaway .left{ padding-left: 3rem;}
+#aboutus h2, #takeaway h2{    padding-right: 150px;   }
+#aboutus button, #takeaway button{    margin-top: 40px;   }
 /* Right */
-#aboutus .right img:first-child{    max-height: 641px;  max-width: 427px;   clip-path: inset(4% 7% 2% 9% round 30px); -webkit-clip-path: inset(4% 7% 2% 9% round 30px); margin-left: 59px;}
-#aboutus .right p{  width: 71px;    height: 325px;  word-wrap: break-word;  padding: 25px;  border-radius: var(--rounded-14);    bottom: 135px;   left: 62px;  font-weight: var(--fw-600);  font-size: 1.5rem;  line-height: 2.2rem;   background: url(/assets/party-confettis.png) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color));  }
-#aboutus .right img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:100px;    bottom: 188px;  }
+#aboutus .right img:first-child, #takeaway .right img:first-child{    max-height: 641px;  max-width: 427px;   clip-path: inset(4% 7% 2% 9% round 30px); -webkit-clip-path: inset(4% 7% 2% 9% round 30px); margin-left: 59px;}
+#aboutus .right p, #takeaway .right p{  width: 71px;    height: 325px;  word-wrap: break-word;  padding: 25px;  border-radius: var(--rounded-14);    bottom: 135px;   left: 62px;  font-weight: var(--fw-600);  font-size: 1.5rem;  line-height: 2.2rem;   background: url(/assets/party-confettis.png) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color));  }
+#aboutus .right img:last-child, #takeaway .right img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:100px;    bottom: 188px;  }
 
 
 /* How It Works */
-#howitworks{    padding-top: 60px; }
+#howitworks{    padding: 60px 0 80px; }
 #howitworks .row{   margin-top: 145px;  }
 #howitworks .row .col{  padding: 0 50px;    }
 #howitworks .row .col > img{    width: 237px;   height: 237px;  border-radius: 50%; object-fit: cover;  margin-bottom: 45px;    object-view-box: inset(15%);    }
@@ -117,3 +121,58 @@ h2::first-letter{   text-transform: capitalize; }
 /* Col Third Child */
 #howitworks .col:last-child::before{    content: "";    background: url(/assets/testimonial-per-3.png) no-repeat center / 65px;   height: 75px;   width: 75px;    border-radius: 50%; overflow: hidden;   border: 5px solid #fff; top: 16px;  left: 70px; }
 #howitworks .col:last-child::after{ content: "";    background: url(/assets/testimonial-per-2.png) no-repeat center / 50px;   height: 58px;   width: 58px;    border-radius: 50%;     overflow: hidden;   border: 5px solid #fff; bottom: 230px;  right: 70px; }
+
+
+
+/* Browse Our Menu */
+#menu{  padding: 80px 0 80px;   }
+#menu::before{ content: ""; background: var(--secondary-color); position: absolute; top: 50%; left: 50%; transform: translate(-50% , -51%);  z-index: -3;    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);  height: 980px;   width: calc(100% - 35px);    }
+#menu h2{   margin: 0 0 37px;   }
+#menu .container-mw > button{ margin-top: 48px !important; }
+#menu .menu-buttons{    margin: 47px 0 0;   }
+#menu .menu-buttons .btn{ width: 140px;   background-color: transparent;  border: 2px solid #000; border-radius: var(--rounded-8);    }
+#menu .menu-buttons .btn{ font-weight: 500;   }
+#menu .menu-buttons .btn:is(:active, :focus){  border: 2px solid var(--primary-color); }
+#menu .menu-buttons .btn:is(:hover, :active, :focus) { color: white; }   
+
+/* Menu Items */
+#menu .d-grid{  gap: 40px !important;   }
+#menu .d-grid .item{   border: 2px solid var(--primary-color); border-radius: var(--rounded-10);  }
+#menu .d-grid .item img{   height: 115px;  width: 115px;   object-fit: cover;    }
+#menu .description{ width: 74%; }
+#menu .d-grid .item .description strong{   font-size: 24px; font-weight: var(--fw-600);    }
+#menu .d-grid .description p{  font-size: 0.9rem;  font-weight: var(--fw-500);  padding-right: 30px;    }
+#menu .description input{   width: 55px;    height: 40px;   outline: 0; border: 2px solid #00000055;}   
+#menu .description .btn{    height: 40px;   width: 120px;   padding: 10px 0;    font-size: 14.5px;  color: white;  }
+#menu .menu-items .g-6{ row-gap: 40px !important;   }
+
+
+
+/* FAQ */
+#faq{   padding: 130px 0 80px;  
+
+    & .left .card::before{    content: ""; position: absolute;   height: 539px;  width: 281px;    position: absolute; z-index: -2;   background: url('/assets/mobile.png')   no-repeat center / cover; right: -67px;  top: -103px;  filter:drop-shadow(-10px 0 5px #00000055);  ;}
+    & .left .card::after{   content: url('/assets/party-confettis-svg.svg');    transform: scale(0.8) rotate(90deg);    position: absolute; top: -85px; left: -72px;}
+}
+
+/* Right */
+#faq .right{    padding-left: 20px; 
+
+    & h2{   margin-bottom: 55px;    }   
+    & p{    padding-right: 50px;    margin-bottom: 54px;}   
+}
+
+/* Left */
+#faq .left .card{ box-shadow: 0px 10px 28px -13px rgba(0,0,0,1);  padding: 15px;    max-width: 376px;   max-height: 363px;  font-family: montserrat;
+
+    & img:first-child{  width: 100%;    position: relative; }
+    & .fa-solid{    font-size: 18px;    color: var(--clr-caribbean-green);  position: absolute; right: 28px;   top: 25px;  background: #fff;  border-radius: 50%; padding: 12px;      box-shadow: 0px 2px 5px #00000055;    }
+    & p{    margin-bottom: 9px; line-height: normal;    }
+    & .primary-clr{    margin-top: 20px !important;    }   
+    & p:last-child{   font-size: 14px;    }   
+    & img:last-child{   height: 55px;   width: 55px;   border-radius: 50%;    border: 4px solid #fff; position: absolute;  bottom: 20px; right: 20px; box-shadow: 0px 3px 10px #00000055;  }
+}
+
+
+
+/* Take Away */
