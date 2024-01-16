@@ -5,7 +5,8 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
 
 /* Default Modified Values */
-body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black) }
+html{   scroll-behavior: smooth;    }
+body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black);    position: relative; }
 a{  text-decoration: none;  color: initial; }
 a:hover, a:focus{   color: var(--primary-color);  }
 ul{ margin: 0;  padding: 0; list-style: none;   }
@@ -13,6 +14,7 @@ button{ border: none;   background: none;   padding: none;  }
 .pd-y{  padding: 85px 0 135px;    }
 h2{ font-size: 60px; line-height: 3.75rem;    margin-bottom: 40px;  -webkit-text-stroke: 1px var(--primary-color);   color: var(--primary-color);  text-align: center;  letter-spacing: -2px;   }
 h2::first-letter{   text-transform: capitalize; }
+.w-95{  width: 100%;    max-width: 95%; }
 
 :root{
     --primary-color: #35b9be;   --secondary-color: #e5fcfc;    --tertinary-color: #007e83; --clr-shadow-blue: #7f8da7;  --clr-teal: #007e83;  --clr-caribbean-green: #04da8d;   --clr-white: #ffffff;  --clr-black: #000000;
@@ -78,7 +80,7 @@ h2::first-letter{   text-transform: capitalize; }
 #hr-bnr h1{    font-size: 3.75rem; line-height: 3.75rem;    margin-bottom: 40px;  -webkit-text-stroke: 1.5px var(--clr-black);   }
 #hr-bnr h1 span{ -webkit-text-stroke: 2px var(--primary-color);   }
 #hr-bnr .left .m-0{    margin-bottom: 3.375rem !important;    }
-#hr-bnr .left .mt-4{  margin-top: 2.428rem !important;   }
+#hr-bnr .left .mt-4{  margin-top: 2.428rem !important;   font-size: 20px;   }
 #hr-bnr .left .fa-solid{    font-size: 33px;    }
 /* Right */
 #hr-bnr .right{ padding: 0 182px 0 22px;    }
@@ -90,18 +92,22 @@ h2::first-letter{   text-transform: capitalize; }
 
 
 /* About Us */
-#aboutus, #takeaway{   margin-top: 103px;   }
+#aboutus{   margin-top: 103px;   }
 #aboutus::before, #takeaway::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 774px;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
 #aboutus::after, #takeaway::after{    content: "yumyum";  font-family: var(--ft-rage);    position: absolute; color: white; bottom: 305px;   left: 200px;    z-index: -1; font-size: 275px;   transform: rotate(-15deg) scale(0.8);}
 /* Left */
-#aboutus .left, #takeaway .left{ padding-left: 3rem;}
-#aboutus h2, #takeaway h2{    padding-right: 150px;   }
+#aboutus .left{ padding-left: 3rem;}
+#aboutus h2{    padding-right: 150px;   }
 #aboutus button, #takeaway button{    margin-top: 40px;   }
 /* Right */
-#aboutus .right img:first-child, #takeaway .right img:first-child{    max-height: 641px;  max-width: 427px;   clip-path: inset(4% 7% 2% 9% round 30px); -webkit-clip-path: inset(4% 7% 2% 9% round 30px); margin-left: 59px;}
+#aboutus .right img:first-child{    max-height: 641px;  max-width: 427px;   clip-path: inset(4% 7% 2% 9% round 30px); -webkit-clip-path: inset(4% 7% 2% 9% round 30px); margin-left: 59px;}
 #aboutus .right p, #takeaway .right p{  width: 71px;    height: 325px;  word-wrap: break-word;  padding: 25px;  border-radius: var(--rounded-14);    bottom: 135px;   left: 62px;  font-weight: var(--fw-600);  font-size: 1.5rem;  line-height: 2.2rem;   background: url(/assets/party-confettis.png) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color));  }
 #aboutus .right img:last-child, #takeaway .right img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:100px;    bottom: 188px;  }
 
+
+/* Go to Top */
+#got{   top: 750px;   float: right;   right: 30px; width: fit-content;  z-index: 999;}
+#got a{ padding: 15px;  display: inline-block;   vertical-align: middle;   line-height: normal;    }
 
 /* How It Works */
 #howitworks{    padding: 60px 0 80px; }
@@ -148,31 +154,59 @@ h2::first-letter{   text-transform: capitalize; }
 
 
 
-/* FAQ */
-#faq{   padding: 130px 0 80px;  
+/* Simple Checkout */
+#sim-ck{   padding: 130px 0 80px;  }
+#sim-ck .left .card::before{    content: ""; position: absolute;   height: 539px;  width: 281px;    position: absolute; z-index: -2;   background: url('/assets/mobile.png')   no-repeat center / cover; right: -67px;  top: -103px;  filter:drop-shadow(-10px 0 5px #00000055);  ;}
+#sim-ck .left .card::after{   content: url('/assets/party-confettis-svg.svg');    transform: scale(0.8) rotate(90deg);    position: absolute; top: -85px; left: -72px;}
 
-    & .left .card::before{    content: ""; position: absolute;   height: 539px;  width: 281px;    position: absolute; z-index: -2;   background: url('/assets/mobile.png')   no-repeat center / cover; right: -67px;  top: -103px;  filter:drop-shadow(-10px 0 5px #00000055);  ;}
-    & .left .card::after{   content: url('/assets/party-confettis-svg.svg');    transform: scale(0.8) rotate(90deg);    position: absolute; top: -85px; left: -72px;}
-}
 
 /* Right */
-#faq .right{    padding-left: 20px; 
+#sim-ck .right{    padding-left: 20px; }
+#sim-ck .right h2{   margin-bottom: 55px;    }   
+#sim-ck .right p{    padding-right: 50px;    margin-bottom: 54px;}   
 
-    & h2{   margin-bottom: 55px;    }   
-    & p{    padding-right: 50px;    margin-bottom: 54px;}   
-}
 
 /* Left */
-#faq .left .card{ box-shadow: 0px 10px 28px -13px rgba(0,0,0,1);  padding: 15px;    max-width: 376px;   max-height: 363px;  font-family: montserrat;
-
-    & img:first-child{  width: 100%;    position: relative; }
-    & .fa-solid{    font-size: 18px;    color: var(--clr-caribbean-green);  position: absolute; right: 28px;   top: 25px;  background: #fff;  border-radius: 50%; padding: 12px;      box-shadow: 0px 2px 5px #00000055;    }
-    & p{    margin-bottom: 9px; line-height: normal;    }
-    & .primary-clr{    margin-top: 20px !important;    }   
-    & p:last-child{   font-size: 14px;    }   
-    & img:last-child{   height: 55px;   width: 55px;   border-radius: 50%;    border: 4px solid #fff; position: absolute;  bottom: 20px; right: 20px; box-shadow: 0px 3px 10px #00000055;  }
-}
+#sim-ck .left .card{ box-shadow: 0px 10px 28px -13px rgba(0,0,0,1);  padding: 15px;    max-width: 376px;   max-height: 363px;  font-family: montserrat;    }
+#sim-ck .left .card img:first-child{  width: 100%;    position: relative; }
+#sim-ck .left .card .fa-solid{    font-size: 18px;    color: var(--clr-caribbean-green);  position: absolute; right: 28px;   top: 25px;  background: #fff;  border-radius: 50%; padding: 12px;      box-shadow: 0px 2px 5px #00000055;    }
+#sim-ck .left .card p{    margin-bottom: 9px; line-height: normal;    }
+#sim-ck .left .card .primary-clr{    margin-top: 20px !important;    }   
+#sim-ck .left .card p:nth-last-child(2){   font-size: 14px !important;    }   
+#sim-ck .left .card img:last-child{   height: 55px;   width: 55px;   border-radius: 50%;    border: 4px solid #fff; position: absolute;  bottom: 20px; right: 20px; box-shadow: 0px 3px 10px #00000055;  }
 
 
 
 /* Take Away */
+#takeaway{  padding-top: 140px; } 
+#takeaway .left p{  padding-right: 50px;    }
+#takeaway .right p{ right: 95px;   left: auto; }
+#takeaway .right img:first-child{    height: 615px;  width: 361px;  object-fit: cover;  border-radius: 30px;    object-view-box: inset(30px);   margin: auto;   }
+#takeaway .right img:last-child{    right: auto;    left: 72px; }
+
+/* Supportus */
+#supportus{ padding: 0 0 100px; }
+#supportus .d-flex{  width: 100%;    max-width: 1624px;  margin: auto;   }
+#supportus .left, #supportus .right{   width: calc(50% - 30px) !important;    height: 596px;    }
+#supportus .left img{  height: 596px;    width: 100%;    }
+#supportus .right{   background:  #35b9be;   overflow: hidden;    flex-direction: column; justify-content: center;    z-index: -5;}
+#supportus .right p{    font-size: 50px;    margin-bottom: 80px;    }
+#supportus .right > *{  padding-left: 71px;    }
+#supportus .right button{   width: fit-content; }
+#supportus .right .btn{ font-weight: 600;   }
+#supportus .right .btn:hover, #supportus .right .btn:focus, #supportus .right .btn:active{ background-color: #fff !important;   }
+#supportus .right::after{   content:  url('/assets/party-confettis.png'); z-index: 5; height: 190px;  width: 200px;   display: inline-block;    position: absolute; left: 0;    bottom: 0;   z-index: -1;   transform: scale(1.8);  opacity: 0.5;} 
+
+
+/* Footer */
+footer{ background-color: #f2ffff;  padding: 94px 0 0;  }
+footer::after{  content: url('/assets/party-confettis.png');    display: inline-block;  width: 200px;   height: 190px;  opacity: 0.2;   transform: scale(1.8) scaleX(-1);  position: absolute; bottom: 0;  left: 0;    }
+footer .f-top .left .fa-solid{ margin-bottom: 40px;    }
+footer .f-top .right{   padding: 0 0 110px; }
+footer .f-top .right ul{    width: 33.33%;  }
+footer .f-top .right ul li{ line-height: 2rem;  }
+footer .f-top .right ul li:first-child{ margin-bottom: 40px;    }
+footer hr{  width: 95%; margin: auto;   }
+footer .f-bottom{   padding: 50px 0;    }
+footer .f-bottom span{  height: 30px;   width: 30px;    display: inline-block;  vertical-align: middle; }
+footer .f-bottom .fa-brands{    font-size: 15px;    color: var(--clr-shadow-blue);  border-color: var(--clr-shadow-blue);   }
