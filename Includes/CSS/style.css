@@ -96,7 +96,7 @@ h2::first-letter{   text-transform: capitalize; }
 #aboutus::before, #takeaway::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 774px;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
 #aboutus::after, #takeaway::after{    content: "yumyum";  font-family: var(--ft-rage);    position: absolute; color: white; bottom: 305px;   left: 200px;    z-index: -1; font-size: 275px;   transform: rotate(-15deg) scale(0.8);}
 /* Left */
-#aboutus .left{ padding-left: 3rem;}
+#aboutus .left, #takeaway .left{ padding-left: 3rem;}
 #aboutus h2{    padding-right: 150px;   }
 #aboutus button, #takeaway button{    margin-top: 40px;   }
 /* Right */
@@ -106,7 +106,7 @@ h2::first-letter{   text-transform: capitalize; }
 
 
 /* Go to Top */
-#got{   top: 750px;   float: right;   right: 30px; width: fit-content;  z-index: 999;}
+#got{   top: 830px;   float: right;   right: 30px; width: fit-content;  z-index: 999;}
 #got a{ padding: 15px;  display: inline-block;   vertical-align: middle;   line-height: normal;    }
 
 /* How It Works */
@@ -155,7 +155,7 @@ h2::first-letter{   text-transform: capitalize; }
 
 
 /* Simple Checkout */
-#sim-ck{   padding: 130px 0 80px;  }
+#sim-ck{   padding: 130px 0 140px;  }
 #sim-ck .left .card::before{    content: ""; position: absolute;   height: 539px;  width: 281px;    position: absolute; z-index: -2;   background: url('/assets/mobile.png')   no-repeat center / cover; right: -67px;  top: -103px;  filter:drop-shadow(-10px 0 5px #00000055);  ;}
 #sim-ck .left .card::after{   content: url('/assets/party-confettis-svg.svg');    transform: scale(0.8) rotate(90deg);    position: absolute; top: -85px; left: -72px;}
 
@@ -179,10 +179,9 @@ h2::first-letter{   text-transform: capitalize; }
 
 /* Take Away */
 #takeaway{  padding-top: 140px; } 
-#takeaway .left p{  padding-right: 50px;    }
 #takeaway .right p{ right: 95px;   left: auto; }
 #takeaway .right img:first-child{    height: 615px;  width: 361px;  object-fit: cover;  border-radius: 30px;    object-view-box: inset(30px);   margin: auto;   }
-#takeaway .right img:last-child{    right: auto;    left: 72px; }
+#takeaway .right img:last-child{    right: auto;    left: 72px; bottom: 35px;   }
 
 /* Supportus */
 #supportus{ padding: 0 0 100px; }
@@ -206,7 +205,7 @@ footer .f-top .right{   padding: 0 0 110px; }
 footer .f-top .right ul{    width: 33.33%;  }
 footer .f-top .right ul li{ line-height: 2rem;  }
 footer .f-top .right ul li:first-child{ margin-bottom: 40px;    }
-footer hr{  width: 95%; margin: auto;   }
+footer hr{  width: 98%; margin: auto;   }
 footer .f-bottom{   padding: 50px 0;    }
 footer .f-bottom span{  height: 30px;   width: 30px;    display: inline-block;  vertical-align: middle; }
 footer .f-bottom .fa-brands{    font-size: 15px;    color: var(--clr-shadow-blue);  border-color: var(--clr-shadow-blue);   }
