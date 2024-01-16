@@ -23,7 +23,7 @@ h2::first-letter{   text-transform: capitalize; }
     --primary-ff: myriad pro;   --secondary-ff: poppins;   --tertinary-ff: montserrat;    --ft-awe: fontawesome;  --ft-rage: rage;
 }
 
-/* Width */
+/* Universal Width */
 .container-mw{  margin: auto;   width: 100%;    max-width: 1246px;  }
 
 /* Font-Family */
@@ -194,6 +194,7 @@ h2::first-letter{   text-transform: capitalize; }
 #supportus .right button{   width: fit-content; }
 #supportus .right .btn{ font-weight: 600;   }
 #supportus .right .btn:hover, #supportus .right .btn:focus, #supportus .right .btn:active{ background-color: #fff !important;   }
+#supportus .right::before{  content: "\f4d8";    font-family: var(--ft-awe);    color: #007e83; position: absolute; top: 50%;   left: 50%;  transform: translate(-50%, -50%);   font-size: 430px;   z-index: -1;    opacity: 0.2;}
 #supportus .right::after{   content:  url('/assets/party-confettis.png'); z-index: 5; height: 190px;  width: 200px;   display: inline-block;    position: absolute; left: 0;    bottom: 0;   z-index: -1;   transform: scale(1.8);  opacity: 0.5;} 
 
 
