@@ -6,7 +6,7 @@
 
 /* Default Modified Values */
 html{   scroll-behavior: smooth;    }
-body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black);    position: relative; }
+body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black);    position: relative; transition: 0.15s;  }
 a{  text-decoration: none;  color: initial; }
 a:hover, a:focus{   color: var(--primary-color);  }
 ul{ margin: 0;  padding: 0; list-style: none;   }
@@ -52,8 +52,10 @@ h2::first-letter{   text-transform: capitalize; }
 .fw-900{    font-weight: var(--fw-900) !important;   }
 
 /* Buttons */
-.btn{   background-color: var(--primary-color);  padding: 1rem 2rem; display: inline-block;  border: none;   }
+.btn{   background-color: var(--primary-color);  padding: 1rem 2rem; display: inline-block;  border: none;   width: 220px;   }
 .btn:focus, .btn:hover, .btn:active{ border: none;   background-color: var(--primary-color) !important;  }
+.btn:is(:focus, :hover){    letter-spacing: 2px;    transition: 0.5s;}
+.btn:is(:focus, :active){    box-shadow: 0px 4px 10px #00000055; border: 0;  }
 
 /* Border Radius */
 .rounded-4{ border-radius: var(--rounded-4)   }
@@ -70,44 +72,47 @@ h2::first-letter{   text-transform: capitalize; }
 /* Header */
 /* Header bottom */
 .header-btm .cart .fa-cart-shopping{    font-size: 1.2rem;  line-height: 1rem !important;}
-.header-btm .cart{  padding: 1.2rem ;   }
-.header-btm .cart::after{   content: "0";   background-color: var(--clr-white);  padding: 3px 6.5px;   position: absolute; right: -15%;   top: -10%;    border-radius: 50%; transform: translate(-0%, -20%);   color: var(--primary-color);   box-shadow: 0 0 5px #00000055;    line-height: 16px; }
+.header-btm .cart{  height: 60px;   width: 60px;    }
+.header-btm .cart .fa-solid{    margin: 20px 0 0;   }
+.header-btm .cart .it-cnt{  top: 0; right: 0;   transform: translate(40%, -40%);    box-shadow: 0px 3px 10px #00000055; padding: 0px 7px;   }
+/* .header-btm .cart::after{   content: "0";   background-color: var(--clr-white);  padding: 3px 6.5px;   position: absolute; right: -15%;   top: -10%;    border-radius: 50%; transform: translate(-0%, -20%);   color: var(--primary-color);   box-shadow: 0 0 5px #00000055;    line-height: 16px; } */
 
 /* Hero Banner */
 #hr-bnr::after{ content: "";    background-color: var(--primary-color);  position: absolute; top: 0; right: 0;   clip-path: ellipse(40% 80% at 100% 0%); -webkit-clip-path: ellipse(40% 80% at 100% 0%); height: 90%;    width: 125%;    z-index: -2;    opacity: 0.1;}
 /* Left */
-#hr-bnr .left{  padding-right: 3.375rem; }
+#hr-bnr .col{  padding-right: 3.375rem; }
 #hr-bnr h1{    font-size: 3.75rem; line-height: 3.75rem;    margin-bottom: 40px;  -webkit-text-stroke: 1.5px var(--clr-black);   }
 #hr-bnr h1 span{ -webkit-text-stroke: 2px var(--primary-color);   }
-#hr-bnr .left .m-0{    margin-bottom: 3.375rem !important;    }
-#hr-bnr .left .mt-4{  margin-top: 2.428rem !important;   font-size: 20px;   }
-#hr-bnr .left .fa-solid{    font-size: 33px;    }
+#hr-bnr .col .m-0{    margin-bottom: 3.375rem !important;    }
+#hr-bnr .col .mt-4{  margin-top: 2.428rem !important;   font-size: 20px;   }
+#hr-bnr .col .fa-solid{    font-size: 33px;    }
 /* Right */
-#hr-bnr .right{ padding: 0 182px 0 22px;    }
-#hr-bnr .right img:first-child{ width: 419px;   max-height: 547px;  clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    -webkit-clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    }
-#hr-bnr .right::before{  content: url(/assets/party-confettis-svg.svg); height: auto;   width: 200px;    position: absolute; z-index: 100;  bottom: -103px; left: -86px;   transform: scale(0.85);}
-#hr-bnr .right img:nth-child(2){    height: 228px; width: 228px; clip-path: inset(0% 0% 0% 0% round 115px); -webkit-clip-path: inset(0% 0% 0% 0% round 115px);  bottom: -50px;  right: 120px;   object-fit: cover;  object-position: top;   }
-#hr-bnr .right img:nth-child(3){    background-color: #fff; padding: 15px;  height: 4.25rem;  z-index: 50;    bottom: 50px; border-radius: 10px;    right: 305px;   }
-#hr-bnr .right img:last-child{  background-color: #fff; border-radius: 5px;    height: 38px; width: 38px;    bottom: 110px;  padding: 7px;  right: 130px;    }
+#hr-bnr .col:last-child{ padding: 0 0px 0 22px;    }
+#hr-bnr .col img:first-child{ width: 419px;   max-height: 547px;  clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    -webkit-clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    }
+#hr-bnr .col:last-child:before{  content: url(/assets/party-confettis-svg.svg); height: auto;   width: 200px;    position: absolute; z-index: 100;  bottom: -103px; left: -86px;   transform: scale(0.85);  }
+#hr-bnr .col img:nth-child(2){    height: 228px; width: 228px; clip-path: inset(0% 0% 0% 0% round 50%); -webkit-clip-path: inset(0% 0% 0% 0% round 50%);  bottom: -50px;  right: 120px;   object-fit: cover;  object-position: top;   }
+#hr-bnr .col img:nth-child(3){    background-color: #fff; object-view-box: inset(-30%);  height: 4.25rem;  z-index: 50;    bottom: 50px; border-radius: 10px;    right: 305px;   }
+#hr-bnr .col img:last-child{  background-color: #fff; border-radius: 5px;    height: 38px; width: 38px;    bottom: 110px;  object-view-box: inset(-20%);  right: 130px;    }
 
 
 /* About Us */
 #aboutus{   margin-top: 103px;   }
-#aboutus::before, #takeaway::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 774px;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
-#aboutus::after, #takeaway::after{    content: "yumyum";  font-family: var(--ft-rage);    position: absolute; color: white; bottom: 305px;   left: 200px;    z-index: -1; font-size: 275px;   transform: rotate(-15deg) scale(0.8);}
+#aboutus::before, #takeaway::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 90%;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
+#aboutus .col:first-child:after, #takeaway .left::after{        content: "yumyum";  font-family: var(--ft-rage);  position: absolute;   color: white;  top: 50%;    left: 50%;  transform: translate(-110%, -70%) rotate(-15deg);  z-index: -1;  font-size: 180px;   }
 /* Left */
-#aboutus .left, #takeaway .left{ padding-left: 3rem;}
+#aboutus .col:first-child, #takeaway .left{ padding-right: 3rem;}
 #aboutus h2{    padding-right: 150px;   }
 #aboutus button, #takeaway button{    margin-top: 40px;   }
 /* Right */
-#aboutus .right img:first-child{    max-height: 641px;  max-width: 427px;   clip-path: inset(4% 7% 2% 9% round 30px); -webkit-clip-path: inset(4% 7% 2% 9% round 30px); margin-left: 59px;}
-#aboutus .right p, #takeaway .right p{  width: 71px;    height: 325px;  word-wrap: break-word;  padding: 25px;  border-radius: var(--rounded-14);    bottom: 135px;   left: 62px;  font-weight: var(--fw-600);  font-size: 1.5rem;  line-height: 2.2rem;   background: url(/assets/party-confettis.png) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color));  }
-#aboutus .right img:last-child, #takeaway .right img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:100px;    bottom: 188px;  }
+#aboutus .col:last-child{   padding: 0 180px 0 110px;}
+#aboutus .col img:first-child{    border-radius: 30px;  }
+#aboutus .col:last-child button, #takeaway .right p{ width: 50px;    text-align: center; word-wrap: break-word;   padding: 15px; border-radius: var(--rounded-10);    bottom: 50%;   transform: translate(-0%, 50%);   left: 85px;   font-weight: var(--fw-600);    font-size: 1.5rem;  line-height: 2.2rem;  background: url(/assets/party-confettis.png) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color)); }
+#aboutus .col img:last-child, #takeaway .right img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:110px;    bottom: 20%;  }
 
 
 /* Go to Top */
 #got{   top: 830px;   float: right;   right: 30px; width: fit-content;  z-index: 999;}
-#got a{ padding: 15px;  display: inline-block;   vertical-align: middle;   line-height: normal;    }
+#got { padding: 15px;  display: inline-block;   vertical-align: middle;   line-height: normal;    }
 
 /* How It Works */
 #howitworks{    padding: 60px 0 80px; }
