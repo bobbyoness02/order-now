@@ -65,7 +65,7 @@ h2::first-letter{   text-transform: capitalize; }
 .rounded-12{ border-radius: var(--rounded-12)  }
 .rounded-14{ border-radius: var(--rounded-14)   }
 
-
+/* Box Shadow */
 
 /* Index Page Style Code Starts Here */
 
@@ -122,12 +122,15 @@ h2::first-letter{   text-transform: capitalize; }
 #howitworks .after::after, #howitworks .before::before{ content: "";    position: absolute; box-shadow: 0 0 10px #00000055; font-family: var(--ft-awe);}
 
 /* Col First Child */
-#howitworks .col:first-child::before{    background-color: #fff; top: 30px; left: 270px;    border-radius: var(--rounded-8); content: "\f291"; font-size: 30px; line-height: normal;   padding: 14.5px 13.13px;    color: var(--primary-color);}
-#howitworks .col:first-child::after{   background: var(--primary-color);   font-size: 16px;    content: "3";   border: 3px solid #fff; font-family: poppins;   color: #fff;    border-radius: 50%; line-height: normal;    padding: 1.5px 5px;   display: inline-block; text-align: center;vertical-align: middle;   right: 80px; top: 20px; z-index: 5;}    
+#howitworks .col:first-child .cart{ top: 20px;  right: 100px; font-size: 30px;    background-color: #fff; padding: 10px 20px;    box-shadow: 0 0 10px #00000055;    }
+#howitworks .col:first-child .count{    padding: 2px 5px;   line-height: normal;    border: 5px solid #fff; box-shadow: 0 0 10px #00000055; top: 10px;  right: 85px;   }
+/* #howitworks .col:first-child::before{    background-color: #fff; top: 30px; left: 270px;    border-radius: var(--rounded-8); content: "\f291"; font-size: 30px; line-height: normal;   padding: 14.5px 13.13px;    color: var(--primary-color);} */
+/* #howitworks .col:first-child::after{   background: var(--primary-color);   font-size: 16px;    content: "3";   border: 3px solid #fff; font-family: poppins;   color: #fff;    border-radius: 50%; line-height: normal;    padding: 1.5px 5px;   display: inline-block; text-align: center;vertical-align: middle;   right: 80px; top: 20px; z-index: 5;}     */
 
 /* Col Second Child */
-#howitworks .col:nth-child(2)::before{  height: 69px;    width: 69px;    object-fit: cover;  border-radius: var(--rounded-10);   background: url(/assets/google-logo.svg) no-repeat center / 40px, linear-gradient( 45deg, #fff, #fff) ; top: 47px;    left: 70px;   }
-#howitworks .col:nth-child(2)::after{   background: url(/assets/apple-svg.svg) no-repeat center / 20px, linear-gradient( 0deg, #ffffff, #ffffff);    height: 40px;   width: 40px;    border-radius: var(--rounded-8);    top: 30px; right: 103px; }
+#howitworks .col:nth-child(2) .google{  top: 50px;  height: 60px;   width: 60px;    left: 70px;}
+/* #howitworks .col:nth-child(2)::before{  height: 69px;    width: 69px;    object-fit: cover;  border-radius: var(--rounded-10);   background: url(/assets/google-logo.svg) no-repeat center / 40px, linear-gradient( 45deg, #fff, #fff) ; top: 47px;    left: 70px;   } */
+/* #howitworks .col:nth-child(2)::after{   background: url(/assets/apple-svg.svg) no-repeat center / 20px, linear-gradient( 0deg, #ffffff, #ffffff);    height: 40px;   width: 40px;    border-radius: var(--rounded-8);    top: 30px; right: 103px; } */
 
 /* Col Third Child */
 #howitworks .col:last-child::before{    content: "";    background: url(/assets/testimonial-per-3.png) no-repeat center / 65px;   height: 75px;   width: 75px;    border-radius: 50%; overflow: hidden;   border: 5px solid #fff; top: 16px;  left: 70px; }
