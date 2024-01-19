@@ -38,7 +38,7 @@
                     <li class="align-middle d-inline-block">
                         <a href="#" class="d-inline-block bg-primary rounded-4 quinary-ft cart position-relative text-center">
                             <i class="fa-solid fa-cart-shopping d-inline-block align-middle" style="color: #ffffff;"></i>
-                            <div class="it-cnt d-inline-block position-absolute primary-clr bg-white rounded-circle">0</div>
+                            <div class="it-cnt d-inline-block position-absolute primary-clr bg-white rounded-circle box-shadow">0</div>
                             </a></li>
                 </ul>
                 <!-- Header Bottom Nav Ends Here -->
@@ -116,8 +116,8 @@
                 <div class="col col-4 after before position-relative">
                     <img src="assets/hiw-first-img-2.jpg" class="overflow-hidden">
                     <ul>
-                        <li><a href="#" class="cart position-absolute rounded-10"><i class="fa-solid fa-bag-shopping primary-clr "></i></a></li>
-                        <li><a href="#" class="count position-absolute rounded-circle bg-primary text-white align-text-top">3</a></li>
+                        <li><a href="#" class="cart position-absolute rounded-10 box-shadow"><i class="fa-solid fa-bag-shopping primary-clr "></i></a></li>
+                        <li><a href="#" class="count position-absolute rounded-circle bg-primary text-white align-text-top box-shadow">3</a></li>
                     </ul>
                     <h6 class="d-block mb-2">Adapt your menu items</h6>
                     <p>Easily adapt your menu using the
@@ -127,8 +127,8 @@
                 <div class="col col-4 after before position-relative">
                     <img src="assets/hiw-second-img.png" class="overflow-hidden">
                     <ul>
-                        <li><a href="https://bnc.lt/download-z-android" class="google position-absolute rounded-10 bg-white"><img src="assets/google-logo.svg" class="img-fluid p-3"></a></li>
-                        <li><a href="https://bnc.lt/download-zomato-ios" class="apple position-absolute rounded-10 bg-white"><img src="assets/apple-svg.svg" class="img-fluid p-3"></a></li>
+                        <li><a href="https://bnc.lt/download-z-android" class="google position-absolute rounded-10 bg-white box-shadow"><img src="assets/google-logo.svg" class="img-fluid p-3"></a></li>
+                        <li><a href="https://bnc.lt/download-zomato-ios" class="apple position-absolute rounded-10 bg-white box-shadow"><img src="assets/apple-svg.svg" class="img-fluid "></a></li>
                     </ul>
                     <h6 class="d-block mb-2">Accept online orders & takeout</h6>
                     <p>Let your customers order and pay via
@@ -137,6 +137,10 @@
                 </div>
                 <div class="col col-4 after before position-relative">
                     <img src="assets/hiw-third-img.jpg" class="overflow-hidden">
+                    <ul>
+                        <li class="profile-1 position-absolute bg-white box-shadow rounded-circle"><img src="assets/testimonial-per-3.png" class="img-fluid w-100 rounded-circle"></li>
+                        <li class="profile-2 position-absolute bg-white box-shadow rounded-circle"><img src="assets/testimonial-per-2.png" class="img-fluid w-100 rounded-circle"></li>
+                    </ul>
                     <h6 class="d-block mb-2">Manage delivery or takeout</h6>
                     <p>Manage your own logistics and take
                         orders simply through the ecommerce
@@ -156,78 +160,91 @@
     
             <!-- Food Menu Buttons Start Here-->
             <div class="menu-buttons container-sm d-flex justify-content-evenly">
-                <button><a href="#menu" class="btn">Burgers</a></button>
-                <button><a href="#menu" class="btn">Sides</a></button>
-                <button><a href="#menu" class="btn">Drinks</a></button>
+                <button class="btn active">Burgers</button>
+                <button class="btn">Sides</button>
+                <button class="btn">Drinks</button>
             </div>
             <!-- Food Menu Buttons End -->
     
             <!-- Food Menu List -->
             <div class=" menu-items d-grid mt-5" style=" grid-template-columns: auto auto;">
                 <!-- Menu Items Starts Here-->
-                <div class="item g-col-6 p-3">
-                    <img src="assets/Fried Egg Burger.webp" alt="Burger Dreams" class="rounded-6">
+                <div class="item g-col-6 p-3 py-4">
+                    <img src="assets/Fried Egg Burger.webp" alt="Burger Dreams" class="rounded-8">
                     <div class="description d-inline-block align-middle ms-4 secondary-ft">
-                        <h4>Burger Dreams<span class="price primary-clr fw-500 float-end">$ 9.20 USD</span></h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-600 m-0">Burger Dreams</h5>
+                            <span class="price primary-clr fw-500">$ 9.20 USD</span>
+                        </div>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry.</p>
-                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded">
-                        <button><a href="#" class="btn">Add To Cart</a></button>
+                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded me-1 text-center">
+                        <button class="btn">Add To Cart</button>
                     </div>
                 </div>
-                <div class="item g-col-6 p-3 ">
-                    <img src="assets/hamburger.jpg" alt="Burger Dreams" class="rounded-6">
+                <div class="item g-col-6 p-3 py-4 ">
+                    <img src="assets/hamburger.jpg" alt="Burger Dreams" class="rounded-8">
                     <div class="description d-inline-block align-middle ms-4 secondary-ft">
-                        <h4 class="fw-600">Burger Waldo</h4>
-                        <span class="price primary-clr fw-500 float-end mt-2">$ 10.00 USD</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-600 m-0">Burger Waldo</h5>
+                            <span class="price primary-clr fw-500">$ 10.00 USD</span>
+                        </div>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry.</p>
-                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded">
-                        <button><a href="#" class="btn">Add To Cart</a></button>
+                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded me-1 text-center">
+                        <button class="btn">Add To Cart</button>
                     </div>
                 </div>
-                <div class="item g-col-6 p-3">
-                    <img src="assets/burger 3.jpg" alt="Burger Dreams" class="rounded-6">
+                <div class="item g-col-6 p-3 py-4">
+                    <img src="assets/burger 3.jpg" alt="Burger Dreams" class="rounded-8">
                     <div class="description d-inline-block align-middle ms-4 secondary-ft">
-                        <h4>Burger Cali</h4>
-                        <span class="price primary-clr fw-500 float-end mt-2">$ 8.00 USD</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-600 m-0">Burger Cali</h5>
+                            <span class="price primary-clr fw-500">$ 8.00 USD</span>
+                        </div>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry.</p>
-                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded">
-                        <button><a href="#" class="btn">Add To Cart</a></button>
+                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded me-1 text-center">
+                        <button class="btn">Add To Cart</button>
                     </div>
                 </div>
-                <div class="item g-col-6 p-3 ">
-                    <img src="assets/burger 4.webp" alt="Burger Dreams" class="rounded-6">
+                <div class="item g-col-6 p-3 py-4 ">
+                    <img src="assets/burger 4.webp" alt="Burger Dreams" class="rounded-8">
                     <div class="description d-inline-block align-middle ms-4 secondary-ft">
-                        <h4 class="fw-600">Burger Bacon Buddy</h4>
-                        <span class="price primary-clr fw-500 float-end mt-2">$ 9.99 USD</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-600 m-0">Burger Bacon Buddy</h5>
+                            <span class="price primary-clr fw-500">$ 9.99 USD</span>
+                        </div>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry.</p>
-                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded">
-                        <button><a href="#" class="btn">Add To Cart</a></button>
+                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded me-1 text-center">
+                        <button class="btn">Add To Cart</button>
                     </div>
                 </div>
-                <div class="item g-col-6 p-3">
-                    <img src="assets/burger 5.jpg" alt="Burger Dreams" class="rounded-6">
+                <div class="item g-col-6 p-3 py-4">
+                    <img src="assets/burger 5.jpg" alt="Burger Dreams" class="rounded-8">
                     <div class="description d-inline-block align-middle ms-4 secondary-ft">
-                        <h4>Burger Spicy</h4>
-                        <span class="price primary-clr fw-500 float-end mt-2">$ 9.20 USD</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-600 m-0">Burger Spicy</h5>
+                            <span class="price primary-clr fw-500">$ 9.20 USD</span>
+                        </div>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry.</p>
-                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded">
-                        <button><a href="#" class="btn">Add To Cart</a></button>
+                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded me-1 text-center">
+                        <button class="btn">Add To Cart</button>
                     </div>
                 </div>
-                <div class="item g-col-6 p-3">
-                    <img src="assets/burger 6.webp" alt="Burger Dreams" class="rounded-6">
+                <div class="item g-col-6 p-3 py-4">
+                    <img src="assets/burger 6.webp" alt="Burger Dreams" class="rounded-8">
                     <div class="description d-inline-block align-middle ms-4 secondary-ft">
-                        <h4 class="fw-600">Burger Classic</h4>
-                        <span class="price primary-clr fw-500 float-end mt-2">$ 8.00 USD</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-600 m-0">Burger Classic</h5>
+                            <span class="price primary-clr fw-500">$ 8.00 USD</span>
+                        </div>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry.</p>
-                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded">
-                        <button><a href="#" class="btn">Add To Cart</a></button>
+                        <input type="number" name="item-count" id="item-count" class="d-inline-block align-middle rounded me-1 text-center">
+                        <button class="btn">Add To Cart</button>
                     </div>
                 </div>
                 <!-- Menu Items End Here -->
@@ -245,18 +262,20 @@
     <section id="sim-ck" class="position-relative">
         <div class="container-mw d-flex">
             <!-- FAQ images Section -->
-            <div class="left w-50">
-                <div class="card rounded-8 ms-5">
+            <div class="col w-50 position-relative">
+                <div class="card rounded-6 position-absolute">
                     <img src="assets/faq-burger.webp" class="rounded-6 ">
                     <i class="fa-solid fa-star"></i>
-                    <p class="primary-clr fw-bold">POPULAR</p>
-                    <p class="fw-bold">The Spicy Chicken</p>
-                    <p>Delivery Estimated - 15-20 min</p>
+                    <p class="primary-clr fw-bold special">POPULAR</p>
+                    <p class="fw-700 name">The Spicy Chicken</p>
+                    <p class="del-time">Delivery Estimated - 15-20 min</p>
                     <img src="assets/testimonial-per-1.png" class="">
                 </div>
+                <img src="assets/ordering-page-1.png" class="img-fluid position-absolute">
+                <img src="assets/ordering-page-2.png" class="img-fluid position-absolute">
             </div>
             <!-- FAQ text content -->
-            <div class="right w-50">
+            <div class="col w-50">
                 <h2 class="text-start">Order online with our
                     simple checkout.</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
