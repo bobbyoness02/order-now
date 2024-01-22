@@ -6,7 +6,7 @@
 
 /* Default Modified Values */
 html{   scroll-behavior: smooth;    }
-body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black);    position: relative; transition: 0.15s;  }
+body{   padding: 0; margin: 0;  font-family: poppins; font-size: 1rem;  color: var(--clr-black);    position: relative; transition: 0.5s;  cursor: default; }
 a{  text-decoration: none;  color: initial; }
 a:hover, a:focus{   color: var(--primary-color);  }
 ul{ margin: 0;  padding: 0; list-style: none;   }
@@ -54,10 +54,16 @@ input[type=number]{    -moz-appearance: textfield; }
 .fw-900{    font-weight: var(--fw-900) !important;   }
 
 /* Buttons */
-.btn{   background-color: var(--primary-color);  padding: 1rem 2rem; display: inline-block;  border: none;   width: 220px;   }
+.btn{   background-color: var(--primary-color);  padding: 1rem 2rem; display: inline-block;  border: none;   width: 220px;   position: relative;    z-index: 2; overflow: hidden;   }
 .btn:focus, .btn:hover, .btn:active{ border: none;   background-color: var(--primary-color) !important;  }
-.btn:is(:focus, :hover){    letter-spacing: 2px;    transition: 0.5s;}
-.btn:is(:focus, :active){    box-shadow: 0px 4px 10px #00000055; border: 0;  }
+.btn:is(:focus, :hover){    letter-spacing: 2px;    transition: 0.5s;   box-shadow: 0px 4px 10px #00000055; border: 0;  }
+.btn:is(:focus, :active){      box-shadow: 0px 4px 10px #00000055; border: 0;   }
+.btn:is(:not(:hover)){  box-shadow: none; letter-spacing: initial;  transition: 0.5s;   }
+
+/* Animated Button */
+.a-btn::before{   content: "";    background-color: var(--primary-color); position: absolute; top: 0; left: 0;    width: 100%;    height: 100%;   z-index: -2;}
+.a-btn::after{  content: "\f563";   font-family: var(--ft-awe); font-size: 40px;    position: absolute; top: 50%;   right: 20px;    transform: translate( 0%, -50%);    z-index: -1;    color: var(--clr-teal); letter-spacing: normal; }
+.a-btn:hover::after{    content: "\f564";   transition: 0s; }
 
 /* Border Radius */
 .rounded-4{ border-radius: var(--rounded-4)   }
@@ -76,9 +82,8 @@ input[type=number]{    -moz-appearance: textfield; }
 
 /* Header */
 /* Header bottom */
-.header-btm .cart .fa-cart-shopping{    font-size: 1.2rem;  line-height: 1rem !important;}
-.header-btm .cart{  height: 60px;   width: 60px;    }
-.header-btm .cart .fa-solid{    margin: 20px 0 0;   }
+.header-btm .cart .fa-cart-shopping{    font-size: 1rem;  line-height: 1rem !important;}
+.header-btm .cart{  padding: 12px 15px;    }
 .header-btm .cart .it-cnt{  top: 0; right: 0;   transform: translate(40%, -40%);    padding: 0px 7px;   }
 
 /* Hero Banner */
@@ -92,26 +97,26 @@ input[type=number]{    -moz-appearance: textfield; }
 #hr-bnr .col .fa-solid{    font-size: 33px;    }
 /* Right */
 #hr-bnr .col:last-child{ padding: 0 0px 0 22px;    }
-#hr-bnr .col img:first-child{ width: 419px;   max-height: 547px;  clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    -webkit-clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    }
-#hr-bnr .col:last-child:before{  content: url(/assets/party-confettis-svg.svg); height: auto;   width: 200px;    position: absolute; z-index: 100;  bottom: -103px; left: -86px;   transform: scale(0.85);  }
-#hr-bnr .col img:nth-child(2){    height: 228px; width: 228px; clip-path: inset(0% 0% 0% 0% round 50%); -webkit-clip-path: inset(0% 0% 0% 0% round 50%);  bottom: -50px;  right: 120px;   object-fit: cover;  object-position: top;   }
-#hr-bnr .col img:nth-child(3){    background-color: #fff; object-view-box: inset(-30%);  height: 4.25rem;  z-index: 50;    bottom: 50px; border-radius: 10px;    right: 305px;   }
-#hr-bnr .col img:last-child{  background-color: #fff; border-radius: 5px;    height: 38px; width: 38px;    bottom: 110px;  object-view-box: inset(-20%);  right: 130px;    }
+#hr-bnr .col:last-child img:first-child{ width: 419px;   max-height: 547px;  clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    -webkit-clip-path: inset(0% 0% 0% 0% round 95px 20px 20px 20px);    }
+#hr-bnr .col:last-child:before{  content: url(/assets/party-confetti.svg); height: auto;   width: 200px;    position: absolute; z-index: 100;  bottom: -103px; left: -86px;   transform: scale(0.85) scaleX(-1);  }
+#hr-bnr .col:last-child img:nth-child(2){    height: 228px; width: 228px; clip-path: inset(0% 0% 0% 0% round 50%); -webkit-clip-path: inset(0% 0% 0% 0% round 50%);  bottom: -50px;  right: 120px;   object-fit: cover;  object-position: top;   }
+#hr-bnr .col:last-child img:nth-child(3){    background-color: #fff; object-view-box: inset(-30%);  height: 4.25rem;  z-index: 50;    bottom: 50px; border-radius: 10px;    right: 305px;   }
+#hr-bnr .col:last-child img:last-child{  background-color: #fff; border-radius: 5px;    height: 38px; width: 38px;    bottom: 110px;  object-view-box: inset(-20%);  right: 130px;    }
 
 
 /* About Us */
 #aboutus{   margin-top: 103px;   }
 #aboutus::before, #takeaway::before{   content: "";    background: var(--secondary-color); width: 1463px;  height: 90%;  position: absolute; top: 50%;   left: 50%;  transform: translate( -50%, -55% );   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);   z-index: -3;}
-#aboutus .col:first-child:after, #takeaway .left::after{        content: "yumyum";  font-family: var(--ft-rage);  position: absolute;   color: white;  top: 50%;    left: 50%;  transform: translate(-110%, -70%) rotate(-15deg);  z-index: -1;  font-size: 180px;   }
+#aboutus .col:first-child:after, #takeaway .col:first-child::after{        content: "yumyum";  font-family: var(--ft-rage);  position: absolute;   color: white;  top: 50%;    left: 50%;  transform: translate(-110%, -70%) rotate(-15deg);  z-index: -1;  font-size: 180px;   }
 /* Left */
-#aboutus .col:first-child, #takeaway .left{ padding-right: 3rem;    }
+#aboutus .col:first-child, #takeaway .col:first-child{ padding-right: 3rem;    }
 #aboutus h2{    padding-right: 150px;   }
 #aboutus button, #takeaway button{    margin-top: 40px;   }
 /* Right */
-#aboutus .col:last-child{   padding: 0 180px 0 110px;   }
+#aboutus .col:last-child, #takeaway .col:last-child{   padding: 0 180px 0 110px;   }
 #aboutus .col img:first-child{    border-radius: 30px;  }
-#aboutus .col:last-child button, #takeaway .right p{ width: 50px;    text-align: center; word-wrap: break-word;   padding: 15px; border-radius: var(--rounded-10);    bottom: 50%;   transform: translate(-0%, 50%);   left: 85px;   font-weight: var(--fw-600);    font-size: 1.5rem;  line-height: 2.2rem;  background: url(/assets/party-confettis.png) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color)); }
-#aboutus .col img:last-child, #takeaway .right img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:110px;    bottom: 20%;  }
+#aboutus .col:last-child button, #takeaway .col:last-child button{ width: 50px;    text-align: center; word-wrap: break-word;   padding: 15px; border-radius: var(--rounded-10);    bottom: 50%;   transform: translate(-0%, 50%);   left: 85px;   font-weight: var(--fw-600);    font-size: 1.5rem;  line-height: 2.2rem;  background: url(/assets/party-confetti-dark.svg) no-repeat center / 150px, linear-gradient( 90deg, var(--primary-color), var(--primary-color)); }
+#aboutus .col img:last-child, #takeaway .col:last-child img:last-child{ max-width: 132px;   height: 122px;   object-fit: cover; object-view-box: inset(0 0 0 20%);  border-radius: var(--rounded-12);   right:110px;    bottom: 20%;  }
 
 
 /* Go to Top */
@@ -168,49 +173,56 @@ input[type=number]{    -moz-appearance: textfield; }
 
 /* Simple Checkout */
 #sim-ck{   padding: 130px 0 140px;  }
-#sim-ck .col:first-child .card::after{   content: url('/assets/party-confettis-svg.svg');    transform: scale(1) rotate(90deg) translate(-70%, 70%);    position: absolute; top: 0; left: 0;}
+#sim-ck .col:first-child .card::after{   content: url('/assets/party-confetti.svg');    transform: scale(1) rotate(90deg) translate(-70%, 70%) scaleX(-1);    position: absolute; top: 0; left: 0;}
 /* Right */
 #sim-ck .col:last-child{    padding-left: 20px; }
 #sim-ck .col:last-child h2{   margin-bottom: 55px;    }   
 #sim-ck .col:last-child p{    padding-right: 50px;    margin-bottom: 54px;}   
 /* Left */
 #sim-ck .col:first-child .card{ box-shadow: 0px 10px 28px -13px #000;   max-width: 250px;   height: 250px;  font-family: montserrat;    top: 50%; left: 50%;  transform: translate(-80%, -50%);   padding: 12px;  }
-#sim-ck .col:first-child .card img:first-child{  width: 100%;    position: relative; max-height: 160px; }
-#sim-ck .col:first-child .card .fa-solid{    font-size: 18px;    color: var(--clr-caribbean-green);  position: absolute; right: 28px;   top: 25px;  background: #fff;  border-radius: 50%; padding: 12px;      box-shadow: 0px 2px 5px #00000055;    }
+#sim-ck .col:first-child .card img:first-child{ width: 100%;    position: relative; max-height: 160px;  }
+#sim-ck .col:first-child .card .fa-solid{    font-size: 14px;    color: var(--clr-caribbean-green);  position: absolute;    right: 20px;   top: 20px;  background: #fff;  border-radius: 50%; padding: 5px 4.5px;      box-shadow: 0px 2px 5px #00000055;    }
 #sim-ck .col:first-child .card p{    margin-bottom: 4px; line-height: normal;    }
 #sim-ck .col:first-child .card .special{   margin-top: 15px;   font-size: 10px; } 
 #sim-ck .col:first-child .card .name{   font-size: 10px !important;    }   
 #sim-ck .col:first-child .card .del-time{ font-size: 8px;    }
 #sim-ck .col:first-child .card img:last-child{   height: 40px;   width: 40px;   border-radius: 50%;    border: 3px solid #fff; position: absolute;  bottom: 20px; right: 15px; box-shadow: 0px 3px 10px #00000055;  }
 #sim-ck .col:first-child > img{    top: 0; left: 0; margin-left: 140px; z-index: -1;    height: 120%;   border-radius: 10px;    box-shadow: -5px 0px 8px 1px #00000044, 5px 0 8px  1px#00000044;    transform: translate(0%, -10%);}
-#sim-ck .col:first-child > img:last-child{  top: 10%;   left: 20%;  z-index: -2;}
+#sim-ck .col:first-child > img:nth-last-child(2){  top: 10%;   left: 20%;  z-index: -2;}
+#sim-ck .col:first-child > img:last-child{  height: 50px;   width: 50px;    object-fit: cover;  border: 2px solid #fff; right: 130px; left: auto; top: 100px;   }
+#sim-ck .col:first-child .card:hover img:first-child{   transform: scale(0.95);  transition: 1s;   }
+#sim-ck .col:first-child .card:hover ~ img:nth-child(2){   left: 37%;  transition: 1.5s ease-out;    }
+#sim-ck .col:first-child .card:hover ~ img:nth-child(3){   left: -39%;  transition: 1.5s ease-out;    }
+#sim-ck .col:first-child .card:hover ~ img:last-child{  z-index: -10;   }
+#sim-ck .col:first-child .card:is(:not(:hover)) img{    transform: scale(1);    transition: 1s; }
+#sim-ck .col:first-child .card:is(:not(:hover)) ~ img:nth-child(2), img:nth-child(3), img:last-child{ transition: 1.5s ease-in;}
 
 
 /* Take Away */
 #takeaway{  padding-top: 140px; } 
-#takeaway .right p{ right: 95px;   left: auto; }
-#takeaway .right img:first-child{    height: 615px;  width: 361px;  object-fit: cover;  border-radius: 30px;    object-view-box: inset(30px);   margin: auto;   }
-#takeaway .right img:last-child{    right: auto;    left: 72px; bottom: 35px;   }
+#takeaway  .col:first-child .btn:hover{   padding: 1rem 0.8rem;   }
+#takeaway .col:last-child button{ right: 155px;   left: auto; }
+#takeaway .col:last-child img:first-child{  object-fit: cover;  border-radius: 30px;    object-view-box: inset(30px);   margin: auto;   }
+#takeaway .col:last-child img:last-child{    right: auto;    left: 50px; bottom: 35px;   }
 
 
 /* Supportus */
 #supportus{ padding: 0 0 100px; }
-#supportus .d-flex{  width: 100%;    max-width: 1624px;  margin: auto;   }
-#supportus .left, #supportus .right{   width: calc(50% - 30px) !important;    height: 596px;    }
-#supportus .left img{  height: 596px;    width: 100%;    }
-#supportus .right{   background:  #35b9be;   overflow: hidden;    flex-direction: column; justify-content: center;    z-index: -5;}
-#supportus .right p{    font-size: 50px;    margin-bottom: 80px;    }
-#supportus .right > *{  padding-left: 71px;    }
-#supportus .right button{   width: fit-content; }
-#supportus .right .btn{ font-weight: 600;   }
-#supportus .right .btn:hover, #supportus .right .btn:focus, #supportus .right .btn:active{ background-color: #fff !important;   }
-#supportus .right::before{  content: "\f4d8";    font-family: var(--ft-awe);    color: #007e83; position: absolute; top: 50%;   left: 50%;  transform: translate(-50%, -50%);   font-size: 430px;   z-index: -1;    opacity: 0.2;}
-#supportus .right::after{   content:  url('/assets/party-confettis.png'); z-index: 5; height: 190px;  width: 200px;   display: inline-block;    position: absolute; left: 0;    bottom: 0;   z-index: -1;   transform: scale(1.8);  opacity: 0.5;} 
+#supportus .row{ gap: 30px;  }
+#supportus .col:first-child img{  height: auto;    width: 100%;    object-fit: cover;  }
+#supportus .col:last-child{   background:  #35b9be;   overflow: hidden;    flex-direction: column; justify-content: center;    z-index: -5;}
+#supportus .col:last-child p{    font-size: 50px;    margin-bottom: 80px;    }
+#supportus .col:last-child > *{  margin-left: 70px;    }
+#supportus .col:last-child button{   width: fit-content; }
+#supportus .col:last-child .btn{ font-weight: 600;   }
+#supportus .col:last-child .btn:hover, #supportus .right .btn:focus, #supportus .right .btn:active{ background-color: #fff !important;   }
+#supportus .col:last-child::before{  content: "\f4d8";    font-family: var(--ft-awe);    color: #007e83; position: absolute; top: 50%;   left: 50%;  transform: translate(-50%, -50%);   font-size: 430px;   z-index: -1;    opacity: 0.2;}
+#supportus .col:last-child::after{   content:  url('/assets/party-confetti-dark.svg'); z-index: 5; height: 190px;  width: 200px;   display: inline-block;    position: absolute; left: 0;    bottom: 0;   z-index: -1;   transform: scale(1.8) scaleX(-1);  opacity: 0.5;} 
 
 
 /* Footer */
 footer{ background-color: #f2ffff;  padding: 94px 0 0;  }
-footer::after{  content: url('/assets/party-confettis.png');    display: inline-block;  width: 200px;   height: 190px;  opacity: 0.2;   transform: scale(1.8) scaleX(-1);  position: absolute; bottom: 0;  left: 0;    }
+footer::after{  content: url('/assets/party-confetti.svg');    display: inline-block;  width: 200px;   height: 190px;  opacity: 0.2;   transform: scale(1.8);  position: absolute; bottom: 0;  left: 0;    }
 footer .f-top .left .fa-solid{ margin-bottom: 40px;    }
 footer .f-top .right{   padding: 0 0 110px; }
 footer .f-top .right ul{    width: 33.33%;  }
@@ -220,3 +232,14 @@ footer hr{  width: 98%; margin: auto;   }
 footer .f-bottom{   padding: 50px 0;    }
 footer .f-bottom span{  height: 30px;   width: 30px;    display: inline-block;  vertical-align: middle; }
 footer .f-bottom .fa-brands{    font-size: 15px;    color: var(--clr-shadow-blue);  border-color: var(--clr-shadow-blue);   }
+footer .f-bottom span:first-child:hover{    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);   }
+footer .f-bottom span:nth-child(2):hover{   background: #1DA1F2;    }
+footer .f-bottom span:last-child:hover{ background: #CD201F;}
+footer .f-bottom span:hover .fa-brands{   color: white; }
+
+
+/* Responsive Starts From Here */
+
+@media (min-width: 1440px){
+    #supportus .container{  width: 100%;    max-width: calc( 100% - 50px ); margin: auto;   }
+}
